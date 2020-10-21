@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>TITLE</title>
+    <title>Sokoban site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
         canvas {
             margin: 0px;
@@ -14,17 +17,26 @@
             z-index: 0;
         }
     </style>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <h1>Sokoban game!</h1>
-    <canvas id="glcanvas" tabindex='1'></canvas>
-    <!-- Minified and statically hosted version of https://github.com/not-fl3/miniquad/blob/master/native/sapp-wasm/js/gl.js -->
-    <script src="https://not-fl3.github.io/miniquad-samples/gl-0.1.19.js"></script>
-    <script src="audio.js"></script>
-    <script>load("rust-sokoban.wasm");</script> <!-- Your compiled wasm file -->
+    <div class="container">
+        <h1>Sokoban game!</h1>
+        <p>
+            Game by <a href="https://twitter.com/oliviff">Olivia Ifrim</a>, adopted for <a
+                href="https://github.com/not-fl3/macroquad">macroquad</a> and WASM by <a
+                href="https://github.com/csirkeee">Andras Eisenberger</a>.
+        </p>
+        <canvas id="glcanvas" tabindex='1'></canvas>
+        <p>Based on <a href="https://sokoban.iolivia.me/">this</a> tutorial, the source code for this version can be
+            found <a href="https://github.com/csirkeee/rust-sokoban-wasm">here</a>.</p>
+    </div>
 </body>
+<!-- Minified and statically hosted version of https://github.com/not-fl3/miniquad/blob/master/native/sapp-wasm/js/gl.js -->
+<script src="https://not-fl3.github.io/miniquad-samples/gl-0.1.19.js"></script>
+<script src="audio.js"></script>
+<script>load("rust-sokoban.wasm");</script> <!-- Your compiled wasm file -->
 
 </html>
